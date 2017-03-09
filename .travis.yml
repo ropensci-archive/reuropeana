@@ -1,21 +1,9 @@
-language: c
-
-script:
-  - ./travis-tool.sh run_tests
-
-before_install:
-  - curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
-  - chmod 755 ./travis-tool.sh
-  - ./travis-tool.sh bootstrap
-
-install:
-  - ./travis-tool.sh install_deps
-
-after_failure:
-  - ./travis-tool.sh dump_logs
+language: r
+sudo: false
+cache: packages
 
 after_success:
-- Rscript -e 'covr::codecov()'
+  - Rscript -e 'covr::codecov()'
 
 env:
   global:
