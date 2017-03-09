@@ -1,8 +1,8 @@
 context("eu_search")
 
 test_that("eu_search", {
-  tt <- eu_search(query = "Mona Lisa", key = getOption("eu_key"))
-  
+  tt <- eu_search(query = "Mona Lisa", key = Sys.getenv("EUROPEANA_KEY"))
+
   expect_is(tt, "list")
   expect_is(tt$apikey, "character")
   expect_equal(tt$success, TRUE)
