@@ -7,7 +7,7 @@ Version: 0.0.4.9220
 Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com")
 License: MIT + file LICENSE
-URL: https://github.com/ropensci/reuropeana
+URL: https://docs.ropensci.org/reuropeana, https://github.com/ropensci/reuropeana
 BugReports: https://github.com/ropensci/reuropeana/issues
 LazyData: yes
 Imports:
